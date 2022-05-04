@@ -68,8 +68,8 @@ if submitButton:
                                           num_train_steps=105,
                                           num_warmup_steps=10,
                                           optimizer_type='adamw')
-    reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
-    #reloaded_model = reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5', custom_objects = {'KerasLayer': hub.KerasLayer})
+    #reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
+    reloaded_model = reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5')
     results = tf.sigmoid(reloaded_model(tf.constant(examples)))
     answer = "HI"
     st.markdown(
