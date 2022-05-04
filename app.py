@@ -7,7 +7,7 @@ import tensorflow_text as text
 
 import sys
 # insert at 1, 0 is the script path (or '' in REPL)
-sys.path.append('tf/models/')
+sys.path.insert(0, '/tf/')
 
 #import os
 #os.environ['PYTHONPATH'] += "/tf/models/"
