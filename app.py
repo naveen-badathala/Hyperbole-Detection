@@ -11,7 +11,7 @@ import tensorflow_text as text
 
 #import sys
 #sys.path.append("/tf/models/")
-export PYTHONPATH=$PYTHONPATH:/tf/models
+export PYTHONPATH=$PYTHONPATH:/tf/models/
 from official.nlp import optimization
 #import os
 #from eval import evaluate
