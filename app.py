@@ -5,8 +5,8 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text as text
 
-from tensorflow_addons.optimizers import adamw
-tf.keras.optimizers.adamw = adamw
+#from tensorflow_addons.optimizers import adamw
+#tf.keras.optimizers.adamw = adamw
 
 #import sys
 # insert at 1, 0 is the script path (or '' in REPL)
@@ -72,7 +72,7 @@ if submitButton:
                                           num_warmup_steps=10,
                                           optimizer_type='adamw')
     #reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
-    reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5', custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': adamw})
+    reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5', custom_objects = None)
     results = tf.sigmoid(reloaded_model(tf.constant(examples)))
     answer = "HI"
     st.markdown(
