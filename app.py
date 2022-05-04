@@ -12,10 +12,10 @@ os.environ['PYTHONPATH'] += "/tf/models"
 import sys
 sys.path.append("/tf/models")
 from tf.models.official.nlp import optimization
-import os
+#import os
 #from eval import evaluate
 
-export PYTHONPATH='tf/models/'
+#export PYTHONPATH='tf/models/'
 
 curr_dir = os.getcwd()
 models_dir = curr_dir + "/models/"
