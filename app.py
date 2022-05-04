@@ -7,10 +7,10 @@ import tensorflow_text as text
 
 
 import os
-os.environ['PYTHONPATH'] += "/tf/models"
+os.environ['PYTHONPATH'] += "/tf/models/"
 
 import sys
-sys.path.append("/tf/models")
+sys.path.append("/tf/models/")
 from official.nlp import optimization
 #import os
 #from eval import evaluate
