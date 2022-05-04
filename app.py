@@ -6,7 +6,9 @@ import tensorflow_hub as hub
 import tensorflow_text as text
 
 import sys
-sys.path.insert(0,'/tf/models/')
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '/tf/models/')
 
 #import os
 #os.environ['PYTHONPATH'] += "/tf/models/"
