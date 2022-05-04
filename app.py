@@ -8,7 +8,7 @@ from tf.models.official.nlp import optimization
 import os
 #from eval import evaluate
 
-export PYTHONPATH=tf/models/
+export PYTHONPATH='tf/models/'
 
 curr_dir = os.getcwd()
 models_dir = curr_dir + "/models/"
