@@ -11,7 +11,7 @@ os.environ['PYTHONPATH'] += "/tf/models"
 
 import sys
 sys.path.append("/tf/models")
-from tf.models.official.nlp import optimization
+from official.nlp import optimization
 #import os
 #from eval import evaluate
 
