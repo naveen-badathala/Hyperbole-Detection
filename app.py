@@ -6,7 +6,7 @@ import tensorflow_hub as hub
 import tensorflow_text as text
 
 from tensorflow_addons.optimizers import adamw
-tf.keras.optimizers.RectifiedAdam = RectifiedAdam
+tf.keras.optimizers.adamw = adamw
 
 #import sys
 # insert at 1, 0 is the script path (or '' in REPL)
