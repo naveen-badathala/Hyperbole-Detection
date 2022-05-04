@@ -65,8 +65,8 @@ if submitButton:
    #     examples.append(text_input3)
     #init_lr = 3e-5
     optimizer = optimization.create_optimizer(init_lr=3e-5,
-                                          num_train_steps=70,
-                                          num_warmup_steps=7,
+                                          num_train_steps=105,
+                                          num_warmup_steps=10,
                                           optimizer_type='adamw')
     reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
     #reloaded_model = reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5', custom_objects = {'KerasLayer': hub.KerasLayer})
