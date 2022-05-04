@@ -5,9 +5,9 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text as text
 
-import sys
+#import sys
 # insert at 1, 0 is the script path (or '' in REPL)
-sys.path.insert(0, '/tf/models/')
+#sys.path.insert(0, '/tf/models/')
 
 #import os
 #os.environ['PYTHONPATH'] += "/tf/models/"
@@ -15,7 +15,7 @@ sys.path.insert(0, '/tf/models/')
 #import sys
 #sys.path.append("/tf/models/")
 #export PYTHONPATH=$PYTHONPATH:/tf/models/
-from .official.nlp import optimization
+#from .official.nlp import optimization
 #import os
 #from eval import evaluate
 
@@ -65,8 +65,8 @@ if submitButton:
    #     examples.append(text_input3)
     #init_lr = 3e-5
     optimizer = optimization.create_optimizer(optimizer_type='adamw')
-    reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
-    #reloaded_model = reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5')
+    #reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
+    reloaded_model = reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5')
     results = tf.sigmoid(reloaded_model(tf.constant(examples)))
     answer = "HI"
     st.markdown(
