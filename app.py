@@ -4,6 +4,13 @@ import streamlit as st
 import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text as text
+
+
+import os
+os.environ['PYTHONPATH'] += "/tf/models"
+
+import sys
+sys.path.append("/tf/models")
 from tf.models.official.nlp import optimization
 import os
 #from eval import evaluate
