@@ -20,7 +20,7 @@ seed = 42
 
 bert_model_name = 'bert_en_cased_L-12_H-768_A-12' 
 
-
+@st.cache
 tfhub_handle_encoder = 'https://tfhub.dev/tensorflow/bert_en_cased_L-12_H-768_A-12/3'
 tfhub_handle_preprocess = 'https://tfhub.dev/tensorflow/bert_en_cased_preprocess/3'
 
@@ -68,7 +68,7 @@ classifier_model.compile(optimizer=optimizer,
                          loss=loss,
                          metrics=metrics)
 
-
+@st.cache
 reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
 #test_loss, test_acc = reloaded_model.evaluate(x_test, y_test)
 
