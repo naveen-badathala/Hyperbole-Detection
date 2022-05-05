@@ -71,7 +71,7 @@ classifier_model.compile(optimizer=optimizer,
                          metrics=metrics)
 
 @st.cache
-def load_model(test)
+def load_model(test):
   reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
   results = tf.sigmoid(reloaded_model(tf.constant(examples)))
   return results
