@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 tf.get_logger().setLevel('ERROR')
 
 
-
+curr_dir = os.getcwd()
+models_dir = curr_dir + "/models/"
 AUTOTUNE = tf.data.AUTOTUNE
 batch_size = 32
 seed = 42
@@ -68,7 +69,7 @@ classifier_model.compile(optimizer=optimizer,
                          metrics=metrics)
 
 
-reloaded_model = tf.keras.models.load_model('hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
+reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
 #test_loss, test_acc = reloaded_model.evaluate(x_test, y_test)
 
 #print('Test accuracy:', test_acc)
