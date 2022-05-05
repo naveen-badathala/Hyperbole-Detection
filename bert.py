@@ -71,14 +71,18 @@ classifier_model.compile(optimizer=optimizer,
                          metrics=metrics)
 
 @st.cache
-reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
-#test_loss, test_acc = reloaded_model.evaluate(x_test, y_test)
+def load_model(test)
+  reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
+  results = tf.sigmoid(reloaded_model(tf.constant(examples)))
+  return results
+  #test_loss, test_acc = reloaded_model.evaluate(x_test, y_test)
 
 #print('Test accuracy:', test_acc)
 
 def inference(examples):
   #examples = ['I know programming like the back of my palm', 'I know programming very well']
-
-  results = tf.sigmoid(reloaded_model(tf.constant(examples)))
+  
+  results = load_model(tf.constanst(examples))
+  #results = tf.sigmoid(reloaded_model(tf.constant(examples)))
   return results
 
