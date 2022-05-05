@@ -1,6 +1,7 @@
 import os
 import shutil
 
+import streamlit as st
 import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text as text
@@ -20,7 +21,7 @@ seed = 42
 
 bert_model_name = 'bert_en_cased_L-12_H-768_A-12' 
 
-@st.cache
+
 tfhub_handle_encoder = 'https://tfhub.dev/tensorflow/bert_en_cased_L-12_H-768_A-12/3'
 tfhub_handle_preprocess = 'https://tfhub.dev/tensorflow/bert_en_cased_preprocess/3'
 
