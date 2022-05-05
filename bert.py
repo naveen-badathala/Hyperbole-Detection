@@ -70,7 +70,7 @@ classifier_model.compile(optimizer=optimizer,
                          loss=loss,
                          metrics=metrics)
 
-@st.cache
+
 reloaded_model = tf.keras.models.load_model(models_dir + 'hypo_red_trained_bert_cased_e3.h5',  custom_objects = {'KerasLayer': hub.KerasLayer, 'AdamWeightDecay': optimizer})
 #test_loss, test_acc = reloaded_model.evaluate(x_test, y_test)
 
